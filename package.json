@@ -1,0 +1,34 @@
+{
+  "name": "ui-library-template",
+  "version": "1.0.0",
+  "description": "A template of a React UI library with a test app. It uses a monorepo structure.",
+  "homepage": "https://github.com/alfed7/ui-library-template#readme",
+  "bugs": {
+    "url": "https://github.com/alfed7/ui-library-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfed7/ui-library-template.git"
+  },
+  "workspaces": [
+    "packages/lib",
+    "packages/app"
+  ],
+  "license": "MIT",
+  "author": "Alexander Fedorenko",
+  "main": "packages/lib/dist/index.js",
+  "type": "module",
+  "module": "packages/lib/dist/esm/index.esm.js",
+  "types": "packages/lib/dist/types/index.d.ts",
+  "style": "packages/lib/dist/index.css",
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:lib": "npm --workspace lib run dev",
+    "dev:app": "npm --workspace app run dev"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
