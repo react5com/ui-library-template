@@ -1,21 +1,21 @@
 {
-  "name": "ui-library-template",
+  "name": "@react5/ui-library-template",
   "version": "1.0.0",
   "description": "A template of a React UI library with a test app. It uses a monorepo structure.",
-  "homepage": "https://github.com/alfed7/ui-library-template#readme",
+  "homepage": "https://github.com/react5com/ui-library-template#readme",
   "bugs": {
-    "url": "https://github.com/alfed7/ui-library-template/issues"
+    "url": "https://github.com/react5com/ui-library-template/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alfed7/ui-library-template.git"
+    "url": "git+https://github.com/react5com/ui-library-template.git"
   },
   "workspaces": [
     "packages/lib",
     "packages/app"
   ],
   "license": "MIT",
-  "author": "Alexander Fedorenko",
+  "author": "React5",
   "main": "packages/lib/dist/index.js",
   "type": "module",
   "module": "packages/lib/dist/esm/index.esm.js",
