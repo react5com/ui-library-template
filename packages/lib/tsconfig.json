@@ -21,6 +21,6 @@
     "baseUrl": "./src",
     "emitDeclarationOnly": true
   },
-  "include": ["src"],
+  "include": ["src", "declaration.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -10,7 +10,7 @@ import svgr from '@svgr/rollup';
 
 const production = !process.env.ROLLUP_WATCH;
 process.env.NODE_ENV = production ? 'production' : '';
-const extensions = [".js", ".jsx", ".ts", ".tsx", ".json"];
+const extensions = [".js", ".jsx", ".ts", ".tsx", ".json", ".svg", ];
 const external = [
   ...Object.keys(pkg.peerDependencies || {}),
   ...Object.keys(pkg.dependencies || {}),
@@ -44,8 +44,8 @@ export default [
         extensions,
       }),
       json(),
-      commonjs(),
       svgr(),
+      commonjs(),
       babel({
         exclude: /^(.+\/)?node_modules\/.+$/,
         extensions,
