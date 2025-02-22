@@ -1,0 +1,12 @@
+{
+  "core": {
+    "view": "Voir",
+    "edit": "Editer",
+    "name": "Nom",
+    "title": "Titre",
+    "description": "Description",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "settings": "Paramètres"
+  }
+}

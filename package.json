@@ -12,10 +12,11 @@
   },
   "workspaces": [
     "packages/lib",
-    "packages/app"
+    "packages/app",
+    "packages/ui-test"
   ],
   "license": "MIT",
-  "author": "React5",
+  "author": "React5.com",
   "main": "packages/lib/dist/index.js",
   "type": "module",
   "module": "packages/lib/dist/esm/index.esm.js",
@@ -25,8 +26,9 @@
     "build": "npm run build --workspaces",
     "test": "npm run test --workspaces",
     "dev": "npm-run-all --parallel dev:*",
-    "dev:lib": "npm --workspace lib run dev",
-    "dev:app": "npm --workspace app run dev"
+    "dev:lib": "npm --workspace @react5/lib run dev",
+    "dev:app": "npm --workspace @react5/app run dev",
+    "uitest": "npm --workspace ui-test run test"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "React5.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -13,7 +14,9 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@react5/lib": "*"
+    "@react5/lib": "*",
+    "i18next": "^23.16.7",
+    "react-i18next": "^15.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",

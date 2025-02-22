@@ -4,12 +4,13 @@ import { babel } from "@rollup/plugin-babel";
 import terser from "@rollup/plugin-terser";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import postcss from 'rollup-plugin-postcss';
-import copy from 'rollup-plugin-copy';
+import bundleSass from "@react5/bundle-sass";
+import json from '@rollup/plugin-json';
+import svgr from '@svgr/rollup';
 
 const production = !process.env.ROLLUP_WATCH;
 process.env.NODE_ENV = production ? 'production' : '';
-const extensions = [".js", ".jsx", ".ts", ".tsx"];
+const extensions = [".js", ".jsx", ".ts", ".tsx", ".json"];
 const external = [
   ...Object.keys(pkg.peerDependencies || {}),
   ...Object.keys(pkg.dependencies || {}),
@@ -42,7 +43,9 @@ export default [
       resolve({
         extensions,
       }),
+      json(),
       commonjs(),
+      svgr(),
       babel({
         exclude: /^(.+\/)?node_modules\/.+$/,
         extensions,
@@ -50,12 +53,7 @@ export default [
         sourcemap: !production,
         skipPreflightCheck: true
       }),
-      postcss({extract: true}),
-      copy({
-        targets: [
-          { src: 'dist/index.css', dest: '../../dist' }
-        ]
-      }),
+      bundleSass({scssOnly: false}),
       production && terser(),
     ],
     watch: {

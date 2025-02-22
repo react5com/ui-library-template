@@ -1,0 +1,11 @@
+.lib-component {
+  color: red;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    font-weight: bold;
+  }
+}
