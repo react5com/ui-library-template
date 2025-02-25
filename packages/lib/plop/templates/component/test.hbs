@@ -1,0 +1,12 @@
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+describe('{{pascalCase name}} Component', () => {
+  test('renders the button with the correct label', () => {
+    render(<{{pascalCase name}} onClick={jest.fn()} >Test</{{pascalCase name}}>);
+    const div = screen.getByRole('{{pascalCase name}}', { name: /click me/i });
+    expect(div).toBeInTheDocument();
+  });
+});

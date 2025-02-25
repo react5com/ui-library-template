@@ -1,0 +1,20 @@
+import { FormEvent, ReactNode } from 'react';
+import './{{pascalCase name}}.scss'
+import clsx from 'clsx';
+import { bem } from "../../utils";
+
+interface {{pascalCase name}}Props {
+  onClick?: (e?: FormEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
+  className?: string;
+  children: ReactNode;
+}
+const b = bem("{{dashCase name}}");
+export const {{pascalCase name}} = ({children, onClick, className}: {{pascalCase name}}Props) => {
+  return (
+    <div className={clsx(b(), className)} onClick={onClick}>
+      {children}
+    </div>
+  )
+}
+export default {{pascalCase name}}

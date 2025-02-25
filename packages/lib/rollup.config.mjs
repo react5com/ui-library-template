@@ -14,7 +14,8 @@ const extensions = [".js", ".jsx", ".ts", ".tsx", ".json", ".svg", ];
 const external = [
   ...Object.keys(pkg.peerDependencies || {}),
   ...Object.keys(pkg.dependencies || {}),
-  "@babel/runtime"
+  "@babel/runtime",
+  "react/jsx-runtime"
 ];
 
 const pathsToWatch =[ 'src/**' ];
