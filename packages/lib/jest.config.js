@@ -7,7 +7,7 @@ export default {
     '^.+\\.(js|jsx|mjs|ts|tsx)$': 'babel-jest',
   },
   moduleNameMapper:{
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    "\\.(css|less|scss|sass|svg)$": "identity-obj-proxy"
   },
   // transformIgnorePatterns: [
   //   'node_modules/(?!(bem)/)',
@@ -16,4 +16,5 @@ export default {
     "/build/",
     "/dist/"
   ],
+  setupFilesAfterEnv: ['./src/test/setupTests.ts'],
 };

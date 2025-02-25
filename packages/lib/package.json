@@ -83,7 +83,8 @@
     "vite": "^6.2.0",
     "plop": "^4.0.1",
     "@testing-library/dom": "^10.4.0",
-    "identity-obj-proxy": "^3.0.0"
+    "identity-obj-proxy": "^3.0.0",
+    "vite-plugin-svgr": "^4.3.0"
   },
   "scripts": {
     "build": "npm-run-all tsc rollup",

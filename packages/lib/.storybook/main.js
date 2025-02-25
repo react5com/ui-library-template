@@ -1,4 +1,6 @@
 import { join, dirname } from 'path';
+import { mergeConfig } from 'vite';
+import svgr from 'vite-plugin-svgr';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -27,6 +29,19 @@ const config = {
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {}
+  },
+
+  viteFinal: async (config, { configType }) => {
+    return mergeConfig(config, {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            additionalData: `@use "../../styles/1-color-vars.scss" as *;`
+          },
+        },
+      },
+      plugins: [svgr({ include: '**/*.svg' })],
+    });
   },
 
   typescript: {
